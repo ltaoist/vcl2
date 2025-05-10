@@ -1,0 +1,38 @@
+/* comment */
+
+#include "bufferdevice.hxx"
+
+namespace vcl
+{
+BufferDevice::BufferDevice(const VclPtr<vcl::Window>& pWindow, vcl::RenderContext& rRenderContext)
+    : m_pBuffer(VclPtr<VirtualDevice>::Create(rRenderContext))
+    , m_pWindow(pWindow)
+    , m_rRenderContext(rRenderContext)
+{
+    m_pBuffer->SetOutputSizePixel(pWindow->GetOutputSizePixel(), false);
+    m_pBuffer->SetTextColor(rRenderContext.GetTextColor());
+    m_pBuffer->DrawOutDev(Point(0, 0), pWindow->GetOutputSizePixel(), Point(0, 0),
+                          pWindow->GetOutputSizePixel(), rRenderContext);
+    m_pBuffer->EnableRTL(rRenderContext.IsRTLEnabled());
+}
+
+void BufferDevice::Dispose()
+{
+    if (m_bDisposed)
+    {
+        return;
+    }
+
+    m_rRenderContext.DrawOutDev(Point(0, 0), m_pWindow->GetOutputSizePixel(), Point(0, 0),
+                                m_pWindow->GetOutputSizePixel(), *m_pBuffer);
+    m_bDisposed = true;
+}
+
+BufferDevice::~BufferDevice() { Dispose(); }
+
+vcl::RenderContext* BufferDevice::operator->() { return m_pBuffer.get(); }
+
+vcl::RenderContext& BufferDevice::operator*() { return *m_pBuffer; }
+}
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

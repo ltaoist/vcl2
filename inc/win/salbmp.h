@@ -1,0 +1,75 @@
+/* comment */
+#ifndef INCLUDED_VCL_INC_WIN_SALBMP_H
+#define INCLUDED_VCL_INC_WIN_SALBMP_H
+
+#include <tools/gen.hxx>
+#include <win/wincomp.hxx>
+#include <salbmp.hxx>
+#include <basegfx/utils/systemdependentdata.hxx>
+#include <memory>
+
+
+struct  BitmapBuffer;
+class   BitmapColor;
+class   BitmapPalette;
+class   SalGraphics;
+namespace Gdiplus { class Bitmap; }
+
+class WinSalBitmap final: public SalBitmap, public basegfx::SystemDependentDataHolder
+{
+private:
+    Size                maSize;
+    HGLOBAL             mhDIB;
+    HBITMAP             mhDDB;
+
+    sal_uInt16          mnBitCount;
+
+    std::shared_ptr<Gdiplus::Bitmap>    ImplCreateGdiPlusBitmap(const WinSalBitmap& rAlphaSource);
+    std::shared_ptr<Gdiplus::Bitmap> ImplCreateGdiPlusBitmap();
+
+public:
+
+    HGLOBAL             ImplGethDIB() const { return mhDIB; }
+    HBITMAP             ImplGethDDB() const { return mhDDB; }
+
+    std::shared_ptr< Gdiplus::Bitmap > ImplGetGdiPlusBitmap(const WinSalBitmap* pAlphaSource = nullptr) const;
+
+    static HGLOBAL      ImplCreateDIB( const Size& rSize, vcl::PixelFormat ePixelFormat, const BitmapPalette& rPal );
+    static HANDLE       ImplCopyDIBOrDDB( HANDLE hHdl, bool bDIB );
+    static sal_uInt16   ImplGetDIBColorCount( HGLOBAL hDIB );
+
+public:
+
+                        WinSalBitmap();
+    virtual             ~WinSalBitmap() override;
+
+public:
+
+    bool                        Create( HANDLE hBitmap );
+    virtual bool                Create( const Size& rSize, vcl::PixelFormat ePixelFormat, const BitmapPalette& rPal ) override;
+    virtual bool                Create( const SalBitmap& rSalBmpImpl ) override;
+    virtual bool                Create( const SalBitmap& rSalBmpImpl, SalGraphics* pGraphics ) override;
+    virtual bool                Create( const SalBitmap& rSalBmpImpl, vcl::PixelFormat eNewPixelFormat ) override;
+    virtual bool                Create( const css::uno::Reference< css::rendering::XBitmapCanvas >& rBitmapCanvas,
+                                           Size& rSize,
+                                           bool bMask = false ) override;
+
+    virtual void                Destroy() override;
+
+    virtual Size                GetSize() const override { return maSize; }
+    virtual sal_uInt16          GetBitCount() const override { return mnBitCount; }
+
+    virtual BitmapBuffer*       AcquireBuffer( BitmapAccessMode nMode ) override;
+    virtual void                ReleaseBuffer( BitmapBuffer* pBuffer, BitmapAccessMode nMode ) override;
+    virtual bool                GetSystemData( BitmapSystemData& rData ) override;
+
+    virtual bool                ScalingSupported() const override;
+    virtual bool                Scale( const double& rScaleX, const double& rScaleY, BmpScaleFlag nScaleFlag ) override;
+    virtual bool                Replace( const Color& rSearchColor, const Color& rReplaceColor, sal_uInt8 nTol ) override;
+
+    virtual const basegfx::SystemDependentDataHolder* accessSystemDependentDataHolder() const override;
+};
+
+#endif // INCLUDED_VCL_INC_WIN_SALBMP_H
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Build|Win32">
+			<Configuration>Build</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Unit Tests|Win32">
+			<Configuration>Unit Tests</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Integration tests|Win32">
+			<Configuration>Integration tests</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{AC58116E-3E0B-5353-997C-67B82678A917}</ProjectGuid>
+		<Keyword>MakeFileProj</Keyword>
+		<ProjectName>CppunitTest vcl_outdev</ProjectName>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Build|Win32'">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unit Tests|Win32'">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Integration tests|Win32'">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<ImportGroup Label="ExtensionSettings"/>
+	<ImportGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Build|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+	</ImportGroup>
+	<ImportGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unit Tests|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+	</ImportGroup>
+	<ImportGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Integration tests|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros"/>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build|Win32'">
+		<NMakeBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl CppunitTest_vcl_outdev&quot;</NMakeBuildCommandLine>
+		<NMakeCleanCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl CppunitTest_vcl_outdev.clean&quot;</NMakeCleanCommandLine>
+		<NMakeReBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl CppunitTest_vcl_outdev.clean CppunitTest_vcl_outdev&quot;</NMakeReBuildCommandLine>
+		<NMakeOutput>C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/instdir/program/soffice.bin</NMakeOutput>
+		<NMakePreprocessorDefinitions>BOOST_ERROR_CODE_HEADER_ONLY;BOOST_OPTIONAL_USE_OLD_DEFINITION_OF_NONE;BOOST_SYSTEM_NO_DEPRECATED;CPPU_ENV=mscx;DBG_UTIL;NOMINMAX;OSL_DEBUG_LEVEL=1;SAL_LOG_INFO;SAL_LOG_WARN;WIN32;WNT;X86_64;_AMD64_=1;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_DLL;_MT;_REENTRANT;_SCL_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_WIN32_WINNT=0x0601;CPPUNIT_PLUGIN_EXPORT='extern &quot;C&quot; SAL_DLLPUBLIC_EXPORT';LIBO_INTERNAL_ONLY;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+		<IncludePath>C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\boost;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\cppunit\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\Include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\config_host;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\inc;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\source\window;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\udkapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\offapi\normal</IncludePath>
+		<AdditionalOptions>-utf-8 -std:c++17 -permissive- -Zc:__cplusplus -Gd -GR -Gs -GS -Gy -MDd -nologo -wd4127 -wd4201 -wd4244 -wd4250 -wd4251 -wd4267 -wd4275 -wd4505 -wd4611 -wd4706 -bigobj -Zc:inline</AdditionalOptions>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unit Tests|Win32'">
+		<NMakeBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl unitcheck&quot;</NMakeBuildCommandLine>
+		<NMakeCleanCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean&quot;</NMakeCleanCommandLine>
+		<NMakeReBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean unitcheck&quot;</NMakeReBuildCommandLine>
+		<NMakeOutput>C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/instdir/program/soffice.bin</NMakeOutput>
+		<NMakePreprocessorDefinitions>BOOST_ERROR_CODE_HEADER_ONLY;BOOST_OPTIONAL_USE_OLD_DEFINITION_OF_NONE;BOOST_SYSTEM_NO_DEPRECATED;CPPU_ENV=mscx;DBG_UTIL;NOMINMAX;OSL_DEBUG_LEVEL=1;SAL_LOG_INFO;SAL_LOG_WARN;WIN32;WNT;X86_64;_AMD64_=1;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_DLL;_MT;_REENTRANT;_SCL_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_WIN32_WINNT=0x0601;CPPUNIT_PLUGIN_EXPORT='extern &quot;C&quot; SAL_DLLPUBLIC_EXPORT';LIBO_INTERNAL_ONLY;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+		<IncludePath>C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\boost;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\cppunit\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\Include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\config_host;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\inc;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\source\window;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\udkapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\offapi\normal</IncludePath>
+		<AdditionalOptions>-utf-8 -std:c++17 -permissive- -Zc:__cplusplus -Gd -GR -Gs -GS -Gy -MDd -nologo -wd4127 -wd4201 -wd4244 -wd4250 -wd4251 -wd4267 -wd4275 -wd4505 -wd4611 -wd4706 -bigobj -Zc:inline</AdditionalOptions>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Integration tests|Win32'">
+		<NMakeBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl unitcheck slowcheck screenshot subsequentcheck&quot;</NMakeBuildCommandLine>
+		<NMakeCleanCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean&quot;</NMakeCleanCommandLine>
+		<NMakeReBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean unitcheck slowcheck screenshot subsequentcheck&quot;</NMakeReBuildCommandLine>
+		<NMakeOutput>C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/instdir/program/soffice.bin</NMakeOutput>
+		<NMakePreprocessorDefinitions>BOOST_ERROR_CODE_HEADER_ONLY;BOOST_OPTIONAL_USE_OLD_DEFINITION_OF_NONE;BOOST_SYSTEM_NO_DEPRECATED;CPPU_ENV=mscx;DBG_UTIL;NOMINMAX;OSL_DEBUG_LEVEL=1;SAL_LOG_INFO;SAL_LOG_WARN;WIN32;WNT;X86_64;_AMD64_=1;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_DLL;_MT;_REENTRANT;_SCL_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_WIN32_WINNT=0x0601;CPPUNIT_PLUGIN_EXPORT='extern &quot;C&quot; SAL_DLLPUBLIC_EXPORT';LIBO_INTERNAL_ONLY;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+		<IncludePath>C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\boost;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\cppunit\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\Include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\config_host;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\inc;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\source\window;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\udkapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\offapi\normal</IncludePath>
+		<AdditionalOptions>-utf-8 -std:c++17 -permissive- -Zc:__cplusplus -Gd -GR -Gs -GS -Gy -MDd -nologo -wd4127 -wd4201 -wd4244 -wd4250 -wd4251 -wd4267 -wd4275 -wd4505 -wd4611 -wd4706 -bigobj -Zc:inline</AdditionalOptions>
+	</PropertyGroup>
+	<ItemDefinitionGroup/>
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/outdev.cxx"/>
+	</ItemGroup>
+	<ItemGroup/>
+	<ItemGroup/>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ImportGroup Label="ExtensionTargets"/>
+</Project>

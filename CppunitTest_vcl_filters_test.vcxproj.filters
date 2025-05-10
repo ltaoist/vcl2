@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-dxf-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-eps-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-met-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-pcd-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-pcx-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-pict-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-ppm-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-psd-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-ras-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-tiff-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-tga-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/graphicfilter/filters-webp-test.cxx">
+			<Filter>qa\cppunit\graphicfilter</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup/>
+	<ItemGroup>
+		<Filter Include="qa\cppunit"/>
+		<Filter Include="qa"/>
+		<Filter Include="qa\cppunit\graphicfilter"/>
+	</ItemGroup>
+</Project>

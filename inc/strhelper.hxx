@@ -1,0 +1,54 @@
+/* comment */#ifndef INCLUDED_VCL_STRHELPER_HXX
+#define INCLUDED_VCL_STRHELPER_HXX
+
+#include <cstring>
+#include <rtl/math.hxx>
+#include <rtl/ustring.hxx>
+#include <vcl/dllapi.h>
+
+namespace psp
+{
+    OUString GetCommandLineToken( int, const OUString& );
+    OString GetCommandLineToken(int, const OString&);
+    // gets one token of a unix command line style string
+    // doublequote, singlequote and singleleftquote protect their respective
+    // contents
+
+    int GetCommandLineTokenCount(const OUString&);
+    // returns number of tokens (zero if empty or whitespace only)
+
+    OUString WhitespaceToSpace( std::u16string_view, bool bProtect = true );
+    OString WhitespaceToSpace(std::string_view);
+    // returns a string with multiple adjacent occurrences of whitespace
+    // converted to a single space. if bProtect is sal_True (nonzero), then
+    // doublequote, singlequote and singleleftquote protect their respective
+    // contents
+
+
+    // parses the first double in the string; decimal is '.' only
+    inline double StringToDouble( std::u16string_view rStr )
+    {
+        return rtl::math::stringToDouble(rStr, u'.', u'\0');
+    }
+
+    inline double StringToDouble(std::string_view rStr)
+    {
+        return rtl::math::stringToDouble(rStr, '.', static_cast<char>(0));
+    }
+
+    // fills a character buffer with the string representation of a double
+    // the buffer has to be long enough (e.g. 128 bytes)
+    // returns the string len
+    inline int getValueOfDouble( char* pBuffer, double f, int nPrecision = 0)
+    {
+        OString aStr( rtl::math::doubleToString( f, rtl_math_StringFormat_G, nPrecision, '.', true ) );
+        int nLen = aStr.getLength();
+        std::strncpy( pBuffer, aStr.getStr(), nLen+1 ); // copy string including terminating zero
+        return nLen;
+    }
+
+} // namespace
+
+#endif // INCLUDED_VCL_STRHELPER_HXX
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

@@ -1,3 +1,6 @@
+VLC
+==================
+
 VLC is a software architectural pattern designed to decouple the development of user interfaces (UI) from business logic and data processing. Its core goal is to reduce code coupling and enhance maintainability through data binding and command mechanisms. Here's a detailed breakdown:
 
 # Components of VLC

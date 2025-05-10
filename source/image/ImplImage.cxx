@@ -1,0 +1,139 @@
+/* comment */
+#include <sal/log.hxx>
+#include <utility>
+#include <vcl/svapp.hxx>
+#include <vcl/bitmapex.hxx>
+#include <vcl/settings.hxx>
+#include <vcl/BitmapFilter.hxx>
+#include <vcl/ImageTree.hxx>
+#include <bitmap/BitmapDisabledImageFilter.hxx>
+#include <comphelper/lok.hxx>
+
+#include <image.h>
+#include <salgdi.hxx>
+
+ImplImage::ImplImage(const BitmapEx &rBitmapEx)
+    : maBitmapChecksum(0)
+    , maSizePixel(rBitmapEx.GetSizePixel())
+    , maBitmapEx(rBitmapEx)
+{
+}
+
+ImplImage::ImplImage(OUString aStockName)
+    : maBitmapChecksum(0)
+    , maStockName(std::move(aStockName))
+{
+}
+
+bool ImplImage::loadStockAtScale(SalGraphics* pGraphics, BitmapEx &rBitmapEx)
+{
+    BitmapEx aBitmapEx;
+
+    ImageLoadFlags eScalingFlags = ImageLoadFlags::NONE;
+    sal_Int32 nScalePercentage = -1;
+
+    double fScale(1.0);
+    if (pGraphics && pGraphics->ShouldDownscaleIconsAtSurface(&fScale)) // scale at the surface
+    {
+        nScalePercentage = fScale * 100.0;
+        eScalingFlags = ImageLoadFlags::IgnoreScalingFactor;
+    }
+
+    OUString aIconTheme = Application::GetSettings().GetStyleSettings().DetermineIconTheme();
+    if (!ImageTree::get().loadImage(maStockName, aIconTheme, aBitmapEx, true,
+                                    nScalePercentage, eScalingFlags))
+    {
+        /* If the uno command has parameters, passed in from a toolbar,
+         * recover from failure by removing the parameters from the file name
+         */
+        if (maStockName.indexOf("%3f") > 0)
+        {
+            sal_Int32 nStart = maStockName.indexOf("%3f");
+            sal_Int32 nEnd = maStockName.lastIndexOf(".");
+
+            OUString aFileName = maStockName.replaceAt(nStart, nEnd - nStart, u"");
+            if (!ImageTree::get().loadImage(aFileName, aIconTheme, aBitmapEx, true,
+                                            nScalePercentage, eScalingFlags))
+            {
+                SAL_WARN("vcl", "Failed to load scaled image from " << maStockName <<
+                         " and " << aFileName << " at " << fScale);
+                return false;
+            }
+        }
+        else
+        {
+            SAL_WARN("vcl", "Failed to load scaled image from " << maStockName <<
+                     " at " << fScale);
+            return false;
+        }
+    }
+    rBitmapEx = aBitmapEx;
+    return true;
+}
+
+Size ImplImage::getSizePixel()
+{
+    Size aRet;
+    if (!isSizeEmpty())
+        aRet = maSizePixel;
+    else if (isStock())
+    {
+        if (loadStockAtScale(nullptr, maBitmapEx))
+        {
+            assert(maDisabledBitmapEx.IsEmpty());
+            assert(maBitmapChecksum == 0);
+            maSizePixel = maBitmapEx.GetSizePixel();
+            aRet = maSizePixel;
+        }
+        else
+            SAL_WARN("vcl", "Failed to load stock icon " << maStockName);
+    }
+    return aRet;
+}
+
+/// non-HiDPI compatibility method.
+BitmapEx const & ImplImage::getBitmapEx(bool bDisabled)
+{
+    getSizePixel(); // force load, and at unity scale.
+    if (bDisabled)
+    {
+        // Changed since we last generated this.
+        BitmapChecksum aChecksum = maBitmapEx.GetChecksum();
+        if (maBitmapChecksum != aChecksum ||
+            maDisabledBitmapEx.GetSizePixel() != maBitmapEx.GetSizePixel())
+        {
+            maDisabledBitmapEx = maBitmapEx;
+            BitmapFilter::Filter(maDisabledBitmapEx, BitmapDisabledImageFilter());
+            maBitmapChecksum = aChecksum;
+        }
+        return maDisabledBitmapEx;
+    }
+
+    return maBitmapEx;
+}
+
+bool ImplImage::isEqual(const ImplImage &ref) const
+{
+    if (isStock() != ref.isStock())
+        return false;
+    if (isStock())
+        return maStockName == ref.maStockName;
+    else
+        return maBitmapEx == ref.maBitmapEx;
+}
+
+BitmapEx const & ImplImage::getBitmapExForHiDPI(bool bDisabled, SalGraphics* pGraphics)
+{
+    if (isStock() && pGraphics)
+    {   // check we have the right bitmap cached.
+        double fScale = 1.0;
+        pGraphics->ShouldDownscaleIconsAtSurface(&fScale);
+        Size aTarget(maSizePixel.Width()*fScale,
+                     maSizePixel.Height()*fScale);
+        if (maBitmapEx.GetSizePixel() != aTarget)
+            loadStockAtScale(pGraphics, maBitmapEx);
+    }
+    return getBitmapEx(bDisabled);
+}
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

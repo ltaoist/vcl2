@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/VisualBackendTest.cxx">
+			<Filter>backendtest</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup/>
+	<ItemGroup>
+		<Filter Include="backendtest"/>
+	</ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/font.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/physicalfontface.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/physicalfontfacecollection.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/physicalfontfamily.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/physicalfontcollection.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup/>
+	<ItemGroup>
+		<Filter Include="qa\cppunit"/>
+		<Filter Include="qa"/>
+	</ItemGroup>
+</Project>

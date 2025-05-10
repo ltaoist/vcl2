@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/opengl/win/context.cxx">
+			<Filter>source\opengl\win</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/app/saldata.cxx">
+			<Filter>win\app</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/app/salinfo.cxx">
+			<Filter>win\app</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/app/salinst.cxx">
+			<Filter>win\app</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/app/salshl.cxx">
+			<Filter>win\app</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/app/saltimer.cxx">
+			<Filter>win\app</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/APNDataObject.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/clipboardmanager.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DataFmtTransl.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DOTransferable.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DtObjFactory.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DTransHelper.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/Fetc.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/FetcList.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/FmtFilter.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/ftransl.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/generic_clipboard.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/globals.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/idroptarget.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/ImplHelper.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/MtaOleClipb.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/source.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/sourcecontext.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/target.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/targetdragcontext.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/targetdropcontext.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/TxtCnvtHlp.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/WinClipboard.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/XNotifyingDataObject.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/XTDataObject.cxx">
+			<Filter>win\dtrans</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/gdiimpl.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salbmp.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salfont.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salgdi.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salgdi2.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salgdi_gdiplus.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salnativewidgets-luna.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salprn.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/salvd.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/winlayout.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/DWriteTextRenderer.cxx">
+			<Filter>win\gdi</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/window/keynames.cxx">
+			<Filter>win\window</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/window/salframe.cxx">
+			<Filter>win\window</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/window/salmenu.cxx">
+			<Filter>win\window</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/window/salobj.cxx">
+			<Filter>win\window</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/APNDataObject.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/clipboardmanager.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DataFmtTransl.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DOTransferable.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DtObjFactory.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/DTransHelper.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/Fetc.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/FetcList.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/FmtFilter.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/ftransl.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/generic_clipboard.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/globals.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/idroptarget.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/ImplHelper.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/MtaOleClipb.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/sourcecontext.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/targetdragcontext.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/targetdropcontext.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/TxtCnvtHlp.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/WinClipboard.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/XNotifyingDataObject.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/dtrans/XTDataObject.hxx">
+			<Filter>win\dtrans</Filter>
+		</ClInclude>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/gdi/gdiimpl.hxx">
+			<Filter>win\gdi</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="win\app"/>
+		<Filter Include="win"/>
+		<Filter Include="win\window"/>
+		<Filter Include="source\opengl"/>
+		<Filter Include="win\gdi"/>
+		<Filter Include="source\opengl\win"/>
+		<Filter Include="win\dtrans"/>
+		<Filter Include="source"/>
+	</ItemGroup>
+</Project>

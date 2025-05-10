@@ -1,0 +1,41 @@
+/* comment */
+
+#include <test/bootstrapfixture.hxx>
+
+#include <vcl/fontcharmap.hxx>
+
+class VclFontCharMapTest : public test::BootstrapFixture
+{
+public:
+    VclFontCharMapTest()
+        : BootstrapFixture(true, false)
+    {
+    }
+
+    void testDefaultFontCharMap();
+
+    CPPUNIT_TEST_SUITE(VclFontCharMapTest);
+    CPPUNIT_TEST(testDefaultFontCharMap);
+    CPPUNIT_TEST_SUITE_END();
+};
+
+void VclFontCharMapTest::testDefaultFontCharMap()
+{
+    FontCharMapRef xfcmap(new FontCharMap()); // gets default map
+
+    CPPUNIT_ASSERT(xfcmap->IsDefaultMap());
+
+    sal_uInt32 nStartBMPPlane = xfcmap->GetFirstChar();
+    sal_uInt32 nStartSupBMPPlane = xfcmap->GetNextChar(0xD800);
+    sal_uInt32 nEndBMPPlane = xfcmap->GetLastChar();
+
+    CPPUNIT_ASSERT_EQUAL(static_cast<sal_uInt32>(0x0020), nStartBMPPlane);
+    CPPUNIT_ASSERT_EQUAL(static_cast<sal_uInt32>(0xE000), nStartSupBMPPlane);
+    CPPUNIT_ASSERT_EQUAL(static_cast<sal_uInt32>(0xFFF0 - 1), nEndBMPPlane);
+}
+
+CPPUNIT_TEST_SUITE_REGISTRATION(VclFontCharMapTest);
+
+CPPUNIT_PLUGIN_IMPLEMENT();
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

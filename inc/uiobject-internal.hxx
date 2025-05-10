@@ -1,0 +1,27 @@
+/* comment */
+
+#include <memory>
+#include <vcl/uitest/uiobject.hxx>
+#include "wizdlg.hxx"
+
+class RoadmapWizard;
+
+class RoadmapWizardUIObject final : public WindowUIObject
+{
+    VclPtr<vcl::RoadmapWizard> mxRoadmapWizard;
+
+public:
+    RoadmapWizardUIObject(const VclPtr<vcl::RoadmapWizard>& xRoadmapWizard);
+    virtual ~RoadmapWizardUIObject() override;
+
+    virtual StringMap get_state() override;
+
+    virtual void execute(const OUString& rAction, const StringMap& rParameters) override;
+
+    static std::unique_ptr<UIObject> create(vcl::Window* pWindow);
+
+private:
+    virtual OUString get_name() const override;
+};
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

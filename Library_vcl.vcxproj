@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Build|Win32">
+			<Configuration>Build</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Unit Tests|Win32">
+			<Configuration>Unit Tests</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Integration tests|Win32">
+			<Configuration>Integration tests</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{EC0FC77C-FD8F-553D-88E1-0A6490532E2B}</ProjectGuid>
+		<Keyword>MakeFileProj</Keyword>
+		<ProjectName>Library vcl</ProjectName>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+	<PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Build|Win32'">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unit Tests|Win32'">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Integration tests|Win32'">
+		<ConfigurationType>Makefile</ConfigurationType>
+		<PlatformToolset>v143</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+	<ImportGroup Label="ExtensionSettings"/>
+	<ImportGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Build|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+	</ImportGroup>
+	<ImportGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Unit Tests|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+	</ImportGroup>
+	<ImportGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Integration tests|Win32'">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros"/>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Build|Win32'">
+		<NMakeBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl Library_vcl&quot;</NMakeBuildCommandLine>
+		<NMakeCleanCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl Library_vcl.clean&quot;</NMakeCleanCommandLine>
+		<NMakeReBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl Library_vcl.clean Library_vcl&quot;</NMakeReBuildCommandLine>
+		<NMakeOutput>C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/instdir/program/soffice.bin</NMakeOutput>
+		<NMakePreprocessorDefinitions>BOOST_ERROR_CODE_HEADER_ONLY;BOOST_OPTIONAL_USE_OLD_DEFINITION_OF_NONE;BOOST_SYSTEM_NO_DEPRECATED;CPPU_ENV=mscx;DBG_UTIL;NOMINMAX;OSL_DEBUG_LEVEL=1;SAL_LOG_INFO;SAL_LOG_WARN;WIN32;WNT;X86_64;_AMD64_=1;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_DLL;_MT;_REENTRANT;_SCL_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_WIN32_WINNT=0x0601;PCH_LEVEL=4;VCL_DLLIMPLEMENTATION;DLLIMPLEMENTATION_UITEST;CUI_DLL_NAME=&quot;cuilo.dll&quot;;DESKTOP_DETECTOR_DLL_NAME=&quot;&quot;;TK_DLL_NAME=&quot;tklo.dll&quot;;GLM_FORCE_CTOR_INIT;ZLIB_CONST;LIBO_INTERNAL_ONLY;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+		<IncludePath>C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\pdfium\public;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\epoxy\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\mdds\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libwebp\src;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libtiff\libtiff;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\zlib;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libpng;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libjpeg-turbo;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\lcms2\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source\i18n;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source\common;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\harfbuzz\src;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\graphite\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\glm;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\expat\lib;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\boost;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\Include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\config_host;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\inc;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\udkapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\offapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\CustomTarget\officecfg\registry</IncludePath>
+		<AdditionalOptions>-utf-8 -std:c++17 -permissive- -Zc:__cplusplus -Gd -GR -Gs -GS -Gy -MDd -nologo -wd4127 -wd4201 -wd4244 -wd4250 -wd4251 -wd4267 -wd4275 -wd4505 -wd4611 -wd4706 -bigobj -Zc:inline</AdditionalOptions>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Unit Tests|Win32'">
+		<NMakeBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl unitcheck&quot;</NMakeBuildCommandLine>
+		<NMakeCleanCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean&quot;</NMakeCleanCommandLine>
+		<NMakeReBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean unitcheck&quot;</NMakeReBuildCommandLine>
+		<NMakeOutput>C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/instdir/program/soffice.bin</NMakeOutput>
+		<NMakePreprocessorDefinitions>BOOST_ERROR_CODE_HEADER_ONLY;BOOST_OPTIONAL_USE_OLD_DEFINITION_OF_NONE;BOOST_SYSTEM_NO_DEPRECATED;CPPU_ENV=mscx;DBG_UTIL;NOMINMAX;OSL_DEBUG_LEVEL=1;SAL_LOG_INFO;SAL_LOG_WARN;WIN32;WNT;X86_64;_AMD64_=1;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_DLL;_MT;_REENTRANT;_SCL_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_WIN32_WINNT=0x0601;PCH_LEVEL=4;VCL_DLLIMPLEMENTATION;DLLIMPLEMENTATION_UITEST;CUI_DLL_NAME=&quot;cuilo.dll&quot;;DESKTOP_DETECTOR_DLL_NAME=&quot;&quot;;TK_DLL_NAME=&quot;tklo.dll&quot;;GLM_FORCE_CTOR_INIT;ZLIB_CONST;LIBO_INTERNAL_ONLY;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+		<IncludePath>C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\pdfium\public;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\epoxy\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\mdds\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libwebp\src;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libtiff\libtiff;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\zlib;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libpng;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libjpeg-turbo;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\lcms2\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source\i18n;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source\common;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\harfbuzz\src;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\graphite\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\glm;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\expat\lib;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\boost;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\Include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\config_host;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\inc;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\udkapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\offapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\CustomTarget\officecfg\registry</IncludePath>
+		<AdditionalOptions>-utf-8 -std:c++17 -permissive- -Zc:__cplusplus -Gd -GR -Gs -GS -Gy -MDd -nologo -wd4127 -wd4201 -wd4244 -wd4250 -wd4251 -wd4267 -wd4275 -wd4505 -wd4611 -wd4706 -bigobj -Zc:inline</AdditionalOptions>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Integration tests|Win32'">
+		<NMakeBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl unitcheck slowcheck screenshot subsequentcheck&quot;</NMakeBuildCommandLine>
+		<NMakeCleanCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean&quot;</NMakeCleanCommandLine>
+		<NMakeReBuildCommandLine>D:/Software/cygwin64/bin/dash.exe -c &quot;PATH=\&quot;/bin:$PATH\&quot;;BUILDDIR=\&quot;C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice\&quot; D:/Software/cygwin64/opt/lo/bin/make -rsC C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl clean unitcheck slowcheck screenshot subsequentcheck&quot;</NMakeReBuildCommandLine>
+		<NMakeOutput>C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/instdir/program/soffice.bin</NMakeOutput>
+		<NMakePreprocessorDefinitions>BOOST_ERROR_CODE_HEADER_ONLY;BOOST_OPTIONAL_USE_OLD_DEFINITION_OF_NONE;BOOST_SYSTEM_NO_DEPRECATED;CPPU_ENV=mscx;DBG_UTIL;NOMINMAX;OSL_DEBUG_LEVEL=1;SAL_LOG_INFO;SAL_LOG_WARN;WIN32;WNT;X86_64;_AMD64_=1;_CRT_NONSTDC_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_DEPRECATE;_DEBUG;_DLL;_MT;_REENTRANT;_SCL_SECURE_NO_WARNINGS;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING;_SILENCE_CXX17_RESULT_OF_DEPRECATION_WARNING;_WIN32_WINNT=0x0601;PCH_LEVEL=4;VCL_DLLIMPLEMENTATION;DLLIMPLEMENTATION_UITEST;CUI_DLL_NAME=&quot;cuilo.dll&quot;;DESKTOP_DETECTOR_DLL_NAME=&quot;&quot;;TK_DLL_NAME=&quot;tklo.dll&quot;;GLM_FORCE_CTOR_INIT;ZLIB_CONST;LIBO_INTERNAL_ONLY;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+		<IncludePath>C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\pdfium\public;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\epoxy\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\mdds\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libwebp\src;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libtiff\libtiff;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\zlib;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libpng;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\libjpeg-turbo;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\lcms2\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source\i18n;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\icu\source\common;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\harfbuzz\src;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\graphite\include;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\glm;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\expat\lib;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnpackedTarball\boost;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt;C:\Program Files (x86)\Windows Kits\10\Include;C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\config_host;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\vcl\inc;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\udkapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\UnoApiHeadersTarget\offapi\normal;C:\Users\Administrator\Desktop\CivicsOffice-civicsoffice-main\CivicsOffice-civicsoffice-main\src_soffice\workdir\CustomTarget\officecfg\registry</IncludePath>
+		<AdditionalOptions>-utf-8 -std:c++17 -permissive- -Zc:__cplusplus -Gd -GR -Gs -GS -Gy -MDd -nologo -wd4127 -wd4201 -wd4244 -wd4250 -wd4251 -wd4267 -wd4275 -wd4505 -wd4611 -wd4706 -bigobj -Zc:inline</AdditionalOptions>
+	</PropertyGroup>
+	<ItemDefinitionGroup/>
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/rendercontext/drawmode.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/skia/SkiaHelper.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/animate/Animation.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/animate/AnimationFrame.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/animate/AnimationRenderer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/cnttype/mcnttfactory.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/cnttype/mcnttype.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/printer/Options.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/printer/QueueInfo.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/bubblewindow.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/errinf.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/settings.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/paint.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/abstdlg.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/accel.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/accmgr.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/brdwin.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/bufferdevice.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/accessibility.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/legacyaccessibility.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/clipping.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/stacking.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/debug.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/globalization.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/builder.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/commandevent.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/cursor.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/debugevent.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/decoview.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dialog.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dlgctrl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dndeventdispatcher.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dndlistenercontainer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dockingarea.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dockmgr.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dockwin.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/event.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/floatwin.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/introwin.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/keycod.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/keyevent.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/layout.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menu.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menubarwindow.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menufloatingwindow.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menuitemlist.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menuwindow.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/mnemonic.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/mouse.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/NotebookBarAddonsMerger.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/OptionalBox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/printdlg.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/scrwnd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/seleng.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/split.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/splitwin.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/status.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/syschild.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/syswin.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/tabdlg.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/tabpage.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/taskpanelist.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/toolbox2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/toolbox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/window2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/window3.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/window.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/winproc.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/wrkwin.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/EnumContext.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/button.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/calendar.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/combobox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/ctrl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/ContextVBox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/DropdownBox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/edit.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/field2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/field.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/fixed.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/fixedhyper.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/hyperlabel.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/fmtfield.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/InterimItemWindow.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/imgctrl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/imivctl1.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/imivctl2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/ivctrl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/longcurr.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/imp_listbox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/listbox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/managedmenubutton.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/menubtn.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/NotebookbarPopup.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/PriorityHBox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/PriorityMergedHBox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/notebookbar.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/WeldedTabbedNotebookbar.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/quickselectionengine.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/prgsbar.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/roadmap.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/roadmapwizard.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/scrbar.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/slider.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/spinbtn.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/spinfld.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/tabctrl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/throbber.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/control/wizardmachine.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/vclmedit.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/textdata.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/textdoc.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/texteng.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/textundo.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/textview.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/txtattr.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/xtextedt.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/toolkit/group.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/toolkit/morebtn.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/background.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/eps.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/outdev.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/stack.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/clipping.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/fill.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/polygon.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/transparent.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/mask.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/bitmap.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/bitmapex.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/font.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/text.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/textline.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/pixel.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/rect.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/line.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/polyline.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/hatch.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/gradient.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/curvedshapes.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/wallpaper.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/vclreferencebase.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/nativecontrols.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/outdev/map.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/text/ImplLayoutArgs.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/text/TextLayoutCache.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/headbar.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/iconview.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/iconviewimpl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/imap.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/imap2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/imap3.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/inetimg.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/svtabbx.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/transfer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/transfer2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/viewdataentry.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/treelist.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/treelistbox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/treelistentry.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/svimpbox.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/svlbitm.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/uiobject.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/text/ImplLayoutRuns.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/text/mnemonic.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/configsettings.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/cvtgrf.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/embeddedfontshelper.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/FileDefinitionWidgetDraw.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/WidgetDefinitionReader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/WidgetDefinition.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/extoutdevdata.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/gdimtf.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/mtfxmldump.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/gdimetafiletools.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/gfxlink.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/gradient.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/graph.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/graphictools.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/hatch.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/impglyphitem.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/impgraph.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/jobset.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/lineinfo.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/mapmod.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/metaact.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/oldprintadaptor.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/pdfbuildin_fonts.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/pdfextoutdevdata.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/pdfwriter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/pdfwriter_impl2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/pdfwriter_impl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/pdfobjectcopier.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/print2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/print3.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/print.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/regband.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/region.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/regionband.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/salgdilayout.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/salgdiimpl.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/sallayout.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/salmisc.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/vectorgraphicdata.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/textlayout.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/virdev.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/wall.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/scrptrun.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/CommonSalLayout.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/gdi/TypeSerializer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/pdf/PdfConfig.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/pdf/ResourceDict.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/pdf/Matrix3.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/pdf/XmpMetadata.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/pdf/ExternalPDFStreams.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/BinaryDataContainer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/BinaryDataContainerTools.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/GraphicID.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/GraphicLoader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/GraphicObject.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/GraphicObject2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/GraphicReader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/Manager.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/UnoBinaryDataContainer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/UnoGraphic.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/UnoGraphicMapper.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/UnoGraphicDescriptor.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/UnoGraphicObject.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/UnoGraphicProvider.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/VectorGraphicSearch.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/graphic/VectorGraphicLoader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/impvect.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/bitmap.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/bitmappalette.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapEx.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapInfoAccess.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapReadAccess.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapWriteAccess.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/alpha.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/dibtools.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/bmpfast.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/bitmapfilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/bitmappaint.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapShadowFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapAlphaClampFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapBasicMorphologyFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapMaskToAlphaFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapMonochromeFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapSmoothenFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapLightenFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapDisabledImageFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapColorizeFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapGaussianSeparableBlurFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapSobelGreyFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapSolarizeFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapSepiaFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapMosaicFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapEmbossGreyFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapPopArtFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapDuoToneFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapConvolutionMatrixFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapMedianFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapInterpolateScaleFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapSeparableUnsharpenFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapFastScaleFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapScaleSuperFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapScaleConvolutionFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapSymmetryCheck.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapColorQuantizationFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapSimpleColorQuantizationFilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapTools.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/checksum.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/Octree.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/salbmp.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/image/Image.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/image/ImageTree.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/image/ImageRepository.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/image/ImplImage.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/image/ImplImageTree.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/BitmapFilterStackBlur.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/canvasbitmap.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/canvastools.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/commandinfoprovider.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/displayconnectiondispatch.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/driverblocklist.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/evntpost.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/lazydelete.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/strhelper.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/svtaccessiblefactory.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/helper/threadex.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/brand.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/customweld.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/dbggui.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/dndhelp.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/help.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/i18nhelp.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/idle.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/salplug.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/salusereventlist.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/salvtables.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/scheduler.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/session.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/settings.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/IconThemeInfo.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/IconThemeScanner.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/IconThemeSelector.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/ITiledRenderable.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/sound.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/stdtext.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/svapp.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/svdata.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/svmain.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/timer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/unohelp2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/htmltransferable.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/unohelp.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/vclevent.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/watchdog.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/weldutils.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/app/winscheduler.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/components/dtranscomp.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/components/factory.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/components/fontident.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/bmp/BmpReader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/bmp/BmpWriter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/egif/egif.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/egif/giflzwc.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/eps/eps.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/etiff/etiff.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/FilterConfigCache.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/FilterConfigItem.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/graphicfilter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/graphicfilter2.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/GraphicNativeTransform.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/GraphicNativeMetadata.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/GraphicFormatDetector.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxf2mtf.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfblkrd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfentrd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfgrprd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfreprd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxftblrd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfvec.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/idxf.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ieps/ieps.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/igif/decode.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/igif/gifread.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/imet/ios2met.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipbm/ipbm.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipcd/ipcd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipcx/ipcx.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipict/ipict.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipsd/ipsd.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipict/shape.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipdf/pdfcompat.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipdf/pdfread.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipdf/pdfdocument.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/iras/iras.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/itga/itga.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/itiff/itiff.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ixbm/xbmread.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ixpm/xpmread.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/Exif.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/jpeg.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/jpegc.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/JpegReader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/JpegWriter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/JpegTransform.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/svm/SvmConverter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/svm/SvmReader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/svm/SvmWriter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/wmf/emfwr.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/wmf/wmf.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/wmf/wmfexternal.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/wmf/wmfwr.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/png/PngImageReader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/png/PngImageWriter.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/webp/reader.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/webp/writer.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/DirectFontSubstitution.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/EmphasisMark.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/Feature.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/FeatureCollector.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/FeatureParser.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/FontSelectPattern.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/LogicalFontInstance.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/OpenTypeFeatureDefinitionList.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/PhysicalFontCollection.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/PhysicalFontFace.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/PhysicalFontFamily.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/fontattributes.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/fontcache.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/fontcharmap.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/fontmetric.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/font/font.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/fontsubset/cff.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/fontsubset/fontsubset.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/fontsubset/sft.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/fontsubset/ttcr.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/fontsubset/xlat.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/pdf/PDFiumTools.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/uitest/logger.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/uitest/uiobject.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/uitest/uitest.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/uitest/uno/uiobject_uno.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/uitest/uno/uitest_uno.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/bitmap.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/clip.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/common.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/gradient.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/line.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/outputdevice.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/pixel.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/polygon.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/polypolygon.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/polypolygon_b2d.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/polyline.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/polyline_b2d.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/text.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/outputdevice/rectangle.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/backendtest/GraphicsRenderTests.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/jsdialog/enabled.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/jsdialog/jsdialogbuilder.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/jsdialog/executor.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/opengl/OpenGLContext.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/opengl/OpenGLHelper.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/pdf/PDFiumLibrary.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/opengl/win/WinDeviceInfo.cxx"/>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/win/app/fileregistration.cxx"/>
+	</ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/transupp.c"/>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/cnttype/mcnttfactory.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/cnttype/mcnttype.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/bufferdevice.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/dlgctrl.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menubarwindow.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menufloatingwindow.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menuitemlist.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/window/menuwindow.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/textdoc.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/edit/textundo.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/treelist/iconviewimpl.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/bitmap/impvect.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/egif/giflzwc.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/FilterConfigCache.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxf2mtf.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfblkrd.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfentrd.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfgrprd.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfreprd.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxftblrd.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/idxf/dxfvec.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/igif/decode.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/igif/gifread.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ipict/shape.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/ixbm/xbmread.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/Exif.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/jpeg.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/jpeg.h"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/JpegReader.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/JpegWriter.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/JpegTransform.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/svm/SvmConverter.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/wmf/emfwr.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/wmf/wmfwr.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/fontsubset/ttcr.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/fontsubset/xlat.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/uitest/uno/uiobject_uno.hxx"/>
+		<ClInclude Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/source/filter/jpeg/transupp.h"/>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+	<ImportGroup Label="ExtensionTargets"/>
+</Project>

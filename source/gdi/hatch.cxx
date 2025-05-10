@@ -1,0 +1,96 @@
+/* comment */
+#include <tools/stream.hxx>
+#include <tools/vcompat.hxx>
+#include <tools/GenericTypeSerializer.hxx>
+#include <vcl/hatch.hxx>
+
+ImplHatch::ImplHatch() :
+    maColor     ( COL_BLACK ),
+    meStyle     ( HatchStyle::Single ),
+    mnDistance  ( 1 ),
+    mnAngle     ( 0 )
+{
+}
+
+bool ImplHatch::operator==( const ImplHatch& rImplHatch ) const
+{
+    return maColor == rImplHatch.maColor &&
+        meStyle == rImplHatch.meStyle &&
+        mnDistance == rImplHatch.mnDistance &&
+        mnAngle == rImplHatch.mnAngle;
+}
+
+Hatch::Hatch() = default;
+
+Hatch::Hatch( const Hatch& ) = default;
+
+Hatch::Hatch( HatchStyle eStyle, const Color& rColor,
+              tools::Long nDistance, Degree10 nAngle10 )
+{
+    mpImplHatch->maColor = rColor;
+    mpImplHatch->meStyle = eStyle;
+    mpImplHatch->mnDistance = nDistance;
+    mpImplHatch->mnAngle = nAngle10;
+}
+
+Hatch::~Hatch() = default;
+
+Hatch& Hatch::operator=( const Hatch& ) = default;
+
+bool Hatch::operator==( const Hatch& rHatch ) const
+{
+    return mpImplHatch == rHatch.mpImplHatch;
+}
+
+
+void Hatch::SetColor( const Color& rColor )
+{
+    mpImplHatch->maColor = rColor;
+}
+
+void Hatch::SetDistance( tools::Long nDistance )
+{
+    mpImplHatch->mnDistance = nDistance;
+}
+
+void Hatch::SetAngle( Degree10 nAngle10 )
+{
+    mpImplHatch->mnAngle = nAngle10;
+}
+
+SvStream& ReadHatch( SvStream& rIStm, Hatch& rHatch )
+{
+    VersionCompatRead aCompat(rIStm);
+
+    sal_uInt16 nTmpStyle(0);
+    rIStm.ReadUInt16(nTmpStyle);
+    rHatch.mpImplHatch->meStyle = static_cast<HatchStyle>(nTmpStyle);
+
+    tools::GenericTypeSerializer aSerializer(rIStm);
+    aSerializer.readColor(rHatch.mpImplHatch->maColor);
+
+    sal_Int32 nTmp32(0);
+    rIStm.ReadInt32(nTmp32);
+    rHatch.mpImplHatch->mnDistance = nTmp32;
+
+    sal_Int16 nTmpAngle(0);
+    rIStm.ReadInt16(nTmpAngle);
+    rHatch.mpImplHatch->mnAngle = Degree10(nTmpAngle);
+
+    return rIStm;
+}
+
+SvStream& WriteHatch( SvStream& rOStm, const Hatch& rHatch )
+{
+    VersionCompatWrite aCompat(rOStm, 1);
+
+    rOStm.WriteUInt16( static_cast<sal_uInt16>(rHatch.mpImplHatch->meStyle) );
+
+    tools::GenericTypeSerializer aSerializer(rOStm);
+    aSerializer.writeColor(rHatch.mpImplHatch->maColor);
+    rOStm.WriteInt32( rHatch.mpImplHatch->mnDistance ).WriteInt16( rHatch.mpImplHatch->mnAngle.get() );
+
+    return rOStm;
+}
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

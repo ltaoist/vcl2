@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+	<ItemGroup>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/BitmapTest.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/BitmapExTest.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/bitmapcolor.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/ScanlineToolsTest.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/BitmapScaleTest.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/BitmapFilterTest.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/BmpFilterTest.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+		<ClCompile Include="C:/Users/Administrator/Desktop/CivicsOffice-civicsoffice-main/CivicsOffice-civicsoffice-main/src_soffice/vcl/qa/cppunit/XpmFilterTest.cxx">
+			<Filter>qa\cppunit</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup/>
+	<ItemGroup>
+		<Filter Include="qa\cppunit"/>
+		<Filter Include="qa"/>
+	</ItemGroup>
+</Project>

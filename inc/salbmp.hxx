@@ -1,0 +1,150 @@
+/* comment */
+#ifndef INCLUDED_VCL_INC_SALBMP_HXX
+#define INCLUDED_VCL_INC_SALBMP_HXX
+
+#include <tools/gen.hxx>
+#include <tools/solar.h>
+#include <vcl/checksum.hxx>
+#include <vcl/BitmapAccessMode.hxx>
+#include <vcl/BitmapBuffer.hxx>
+#include <vcl/bitmap/BitmapTypes.hxx>
+#include <com/sun/star/rendering/XBitmapCanvas.hpp>
+#include <basegfx/utils/systemdependentdata.hxx>
+
+struct BitmapBuffer;
+class Color;
+class SalGraphics;
+class BitmapPalette;
+struct BitmapSystemData;
+enum class BmpScaleFlag;
+
+extern const sal_uLong nVCLRLut[ 6 ];
+extern const sal_uLong nVCLGLut[ 6 ];
+extern const sal_uLong nVCLBLut[ 6 ];
+extern const sal_uLong nVCLDitherLut[ 256 ];
+extern const sal_uLong nVCLLut[ 256 ];
+
+class VCL_PLUGIN_PUBLIC SalBitmap
+{
+public:
+
+    SalBitmap()
+        : mnChecksum(0)
+        , mbChecksumValid(false)
+    {
+    }
+
+    virtual                 ~SalBitmap();
+
+    virtual bool            Create( const Size& rSize,
+                                    vcl::PixelFormat ePixelFormat,
+                                    const BitmapPalette& rPal ) = 0;
+    virtual bool            Create( const SalBitmap& rSalBmp ) = 0;
+    virtual bool            Create( const SalBitmap& rSalBmp,
+                                    SalGraphics* pGraphics ) = 0;
+    virtual bool            Create( const SalBitmap& rSalBmp,
+                                    vcl::PixelFormat eNewPixelFormat) = 0;
+    virtual bool            Create( const css::uno::Reference< css::rendering::XBitmapCanvas >& rBitmapCanvas,
+                                    Size& rSize,
+                                    bool bMask = false ) = 0;
+    virtual void            Destroy() = 0;
+    virtual Size            GetSize() const = 0;
+    virtual sal_uInt16      GetBitCount() const = 0;
+
+    virtual BitmapBuffer*   AcquireBuffer( BitmapAccessMode nMode ) = 0;
+    virtual void            ReleaseBuffer( BitmapBuffer* pBuffer, BitmapAccessMode nMode ) = 0;
+    virtual bool            GetSystemData( BitmapSystemData& rData ) = 0;
+
+    virtual bool            ScalingSupported() const = 0;
+    virtual bool            Scale( const double& rScaleX, const double& rScaleY, BmpScaleFlag nScaleFlag ) = 0;
+    void                    DropScaledCache();
+
+    virtual bool            Replace( const Color& rSearchColor, const Color& rReplaceColor, sal_uInt8 nTol ) = 0;
+
+    virtual bool            ConvertToGreyscale()
+    {
+        return false;
+    }
+    virtual bool            InterpretAs8Bit()
+    {
+        return false;
+    }
+
+    virtual bool            Erase( const Color& /*color*/ )
+    {
+        return false;
+    }
+    // Optimized case for AlphaMask::BlendWith().
+    virtual bool            AlphaBlendWith( const SalBitmap& /*rSalBmp*/ )
+    {
+        return false;
+    }
+
+    BitmapChecksum GetChecksum() const
+    {
+        updateChecksum();
+        if (!mbChecksumValid)
+            return 0; // back-compat
+        return mnChecksum;
+    }
+
+    void InvalidateChecksum()
+    {
+        mbChecksumValid = false;
+    }
+
+protected:
+    BitmapChecksum mnChecksum;
+    bool           mbChecksumValid;
+
+protected:
+    void updateChecksum() const;
+    // helper function to convert data in 1,2,4 bpp formats to a 8/24/32bpp format
+    enum class BitConvert
+    {
+        A8,
+        RGBA,
+        BGRA,
+        LAST = BGRA
+    };
+    static std::unique_ptr< sal_uInt8[] > convertDataBitCount( const sal_uInt8* src,
+        int width, int height, int bitCount, int bytesPerRow, const BitmapPalette& palette,
+        BitConvert type );
+
+public:
+    // access to SystemDependentDataHolder, to support overload in derived class(es)
+    virtual const basegfx::SystemDependentDataHolder* accessSystemDependentDataHolder() const;
+
+    // exclusive management op's for SystemDependentData at SalBitmap
+    template<class T>
+    std::shared_ptr<T> getSystemDependentData() const
+    {
+        const basegfx::SystemDependentDataHolder* pDataHolder(accessSystemDependentDataHolder());
+        if(pDataHolder)
+            return std::static_pointer_cast<T>(pDataHolder->getSystemDependentData(typeid(T).hash_code()));
+        return std::shared_ptr<T>();
+    }
+
+    template<class T, class... Args>
+    std::shared_ptr<T> addOrReplaceSystemDependentData(Args&&... args) const
+    {
+        const basegfx::SystemDependentDataHolder* pDataHolder(accessSystemDependentDataHolder());
+        if(!pDataHolder)
+            return std::shared_ptr<T>();
+
+        std::shared_ptr<T> r = std::make_shared<T>(std::forward<Args>(args)...);
+
+        // tdf#129845 only add to buffer if a relevant buffer time is estimated
+        if(r->calculateCombinedHoldCyclesInSeconds() > 0)
+        {
+            basegfx::SystemDependentData_SharedPtr r2(r);
+            const_cast< basegfx::SystemDependentDataHolder* >(pDataHolder)->addOrReplaceSystemDependentData(r2);
+        }
+
+        return r;
+    }
+};
+
+#endif
+
+/* vim:set shiftwidth=4 softtabstop=4 expandtab: */
