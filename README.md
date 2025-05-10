@@ -1,11 +1,50 @@
-VLC
+VCL
 ==================
 
-VLC is a software architectural pattern designed to decouple the development of user interfaces (UI) from business logic and data processing. Its core goal is to reduce code coupling and enhance maintainability through data binding and command mechanisms. Here's a detailed breakdown:
+Visual Class Library (VCL) is responsible for the widgets (windowing, buttons, controls, file-pickers etc.), operating system abstraction, including basic rendering (e.g. the output device).
 
-# Components of VLC
+It should not be confused with Borland’s Visual Component Library, which is entirely unrelated.
 
-## Model
+VCL provides a graphical toolkit similar to gtk+, Qt, SWING etc.
+
+VCL is a software architectural pattern designed to decouple the development of user interfaces (UI) from animate, components, font, helper, pdf, text, window, app, control, fontsubset, image, printer, toolkit,
+bitmap, edit, gdi, opengl, rendercontext, treelist, cnttype, filter, graphic, outdev, salmain, uitest. Its core goal is to reduce code coupling and enhance maintainability through data binding and command mechanisms.
+
+source/
+
+the main cross-platform chunk of source
+
+inc/
+
+cross-platform abstraction headers
+
+quartz/
+
+code common to macOS and iOS
+
+win/
+
+Windows backend
+
+qt5/
+
+Qt5 (under construction)
+
+How the platform abstraction works
+
+InitVCL calls ‘CreateSalInstance’
+    this is implemented by the compiled platform backends
+the SalInstance vtable is the primary outward facing gateway API for platform backends
+    It is a factory for: SalFrames, SalVirtualDevices, SalPrinters, Timers, the SolarMutex, Drag&Drop and other objects, as well as the primary event loop wrapper.
+Note: references to “SV” in the code mean StarView, which was a portable C++ class library for GUIs, with very old roots, that was developed by StarDivision. Nowadays it is not used by anything except LibreOffice (and OpenOffice).
+
+“svp” stands for “StarView Plugin”.
+
+Here's a detailed breakdown:
+
+# Components of VCL
+
+## VCL Scheduler
 
 Role: Represents data and business logic (e.g., database operations, API calls, validation rules).
 
@@ -17,7 +56,7 @@ Handles data storage, retrieval, and domain-specific logic.
 
 Example: A User class with properties like name and email, or a service fetching data from an API.
 
-## View
+## Event Processing
 
 Role: Defines the UI structure and appearance. It displays data and captures user interactions (e.g., button clicks, input fields).
 
@@ -29,7 +68,7 @@ Platform-specific (e.g., Android XML layouts, Vue/React components, WPF XAML).
 
 Example: A login screen with text fields for username/password and a "Submit" button.
 
-## ViewModel
+## Thread Safety
 
 Role: Acts as a mediator between the View and Model. It transforms raw data from the Model into a format the View can display and handles UI logic.
 

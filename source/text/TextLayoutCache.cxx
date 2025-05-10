@@ -1,4 +1,4 @@
-/* comment */
+/* -*- Mode: C++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4; fill-column: 100 -*- */
 /*
  * This file is part of the LibreOffice project.
  *
@@ -72,4 +72,4 @@ std::shared_ptr<const TextLayoutCache> TextLayoutCache::Create(OUString const& r
 }
 }
 
-/* comment */
+/* vim:set shiftwidth=4 softtabstop=4 expandtab cinoptions=b1,g0,N-s cinkeys+=0=break: */
